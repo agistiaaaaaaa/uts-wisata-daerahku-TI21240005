@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <!-- Meta tags untuk SEO dan responsive -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Galeri foto destinasi wisata">
+    <title>Wisata Daerahku - Galeri</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Header dengan navigasi -->
+    <header class="site-header text-white shadow-lg">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="flex items-center">
+                    <img src="assets/img/Logo Wisata Lombok.png" alt="Wisata Daerahku" class="logo-header">
+                </a>
+                <ul class="flex space-x-6 list-none">
+                    <li><a href="index.html" class="nav-link-custom transition">Beranda</a></li>
+                    <li><a href="destinasi.html" class="nav-link-custom transition">Destinasi</a></li>
+                    <li><a href="galeri.html" class="nav-link-custom transition active">Galeri</a></li>
+                    <li><a href="kontak.html" class="nav-link-custom transition">Kontak</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <h2 class="text-4xl font-bold text-center mb-4 text-gray-800">Galeri Foto Destinasi</h2>
+        <p class="text-center text-gray-600 mb-8">Nikmati keindahan destinasi wisata melalui koleksi foto berikut</p>
+
+        <!-- Grid layout menggunakan CSS Grid -->
+        <div class="galeri-grid mb-5">
+            <!-- Foto 1 -->
+            <div class="galeri-item">
+                <img src="assets/img/gunung-rinjani.jpg" alt="Gunung Rinjani" class="galeri-img">
+            </div>
+            <!-- Foto 2 -->
+            <div class="galeri-item">
+                <img src="assets/img/pantai senggigi.jpg" alt="Pantai Senggigi" class="galeri-img">
+            </div>
+            <!-- Foto 3 -->
+            <div class="galeri-item">
+                <img src="assets/img/desa sade.jpg" alt="Desa Sade" class="galeri-img">
+            </div>
+            <!-- Foto 4 -->
+            <div class="galeri-item">
+                <img src="assets/img/taman narmada.jpg" alt="Taman Narmada" class="galeri-img">
+            </div>
+            <!-- Foto 5 -->
+            <div class="galeri-item">
+                <img src="assets/img/pantai kuta lombok.jpg" alt="Pantai Kuta Lombok" class="galeri-img">
+            </div>
+            <!-- Foto 6 -->
+            <div class="galeri-item">
+                <img src="assets/img/air terjun benang stokel.jpg" alt="Air Terjun Benang Stokel" class="galeri-img">
+            </div>
+            <!-- Foto 7 -->
+            <div class="galeri-item">
+                <img src="assets/img/bukit merese.jpg" alt="Bukit Merese" class="galeri-img">
+            </div>
+            <!-- Foto 8 -->
+            <div class="galeri-item">
+                <img src="assets/img/gili trawangan.jpg" alt="Gili Trawangan" class="galeri-img">
+            </div>
+        </div>
+
+        <!-- Foto tambahan yang akan ditampilkan/sembunyikan -->
+        <div id="fotoTambahan" class="galeri-grid d-none" aria-hidden="true">
+            <!-- Foto 9 -->
+            <div class="galeri-item">
+                <img src="assets/img/pantai pink.jpg" alt="Pantai Pink" class="galeri-img">
+            </div>
+            <!-- Foto 10 -->
+            <div class="galeri-item">
+                <img src="assets/img/wisata alam.jpg" alt="Wisata Alam" class="galeri-img">
+            </div>
+            <!-- Foto 11 -->
+            <div class="galeri-item">
+                <img src="assets/img/wisata kuliner.jpg" alt="Wisata Kuliner" class="galeri-img">
+            </div>
+        </div>
+
+        <!-- Tombol Toggle -->
+        <div class="text-center mt-6">
+            <button id="btnToggleFoto" class="btn btn-primary btn-lg">
+                Tampilkan Semua
+            </button>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer text-white py-8 mt-8">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <p>&copy; 2025 Wisata Daerahku. Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <!-- Meta tags untuk SEO dan responsive -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Detail destinasi wisata">
+    <title>Wisata Daerahku - Detail Destinasi</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Header dengan navigasi -->
+    <header class="site-header text-white shadow-lg">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="flex items-center">
+                    <img src="assets/img/Logo Wisata Lombok.png" alt="Wisata Daerahku" class="logo-header">
+                </a>
+                <ul class="flex space-x-6 list-none">
+                    <li><a href="index.html" class="nav-link-custom transition">Beranda</a></li>
+                    <li><a href="destinasi.html" class="nav-link-custom transition active">Destinasi</a></li>
+                    <li><a href="galeri.html" class="nav-link-custom transition">Galeri</a></li>
+                    <li><a href="kontak.html" class="nav-link-custom transition">Kontak</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Detail Destinasi -->
+        <div class="row mb-5">
+            <div class="col-12 col-md-6 mb-4">
+                <img id="destinasiImage" src="assets/img/destinasi2.jpg" 
+                     class="img-fluid rounded shadow detail-img" alt="Destinasi Wisata">
+            </div>
+            <div class="col-12 col-md-6">
+                <h2 id="destinasiNama" class="text-3xl font-bold mb-3">Pantai Senggigi</h2>
+                <p id="destinasiDeskripsi" class="text-gray-600 mb-4">
+                    Pantai Senggigi adalah salah satu destinasi wisata pantai paling populer di Lombok. Terletak di pesisir barat Lombok, pantai ini menawarkan pasir putih yang halus, air laut yang jernih, dan pemandangan sunset yang sangat memukau. Pantai ini memiliki ombak yang relatif tenang, cocok untuk berenang dan berbagai aktivitas air. Sepanjang pantai terdapat berbagai resort, hotel, restoran, dan warung makan yang menyajikan hidangan laut segar.
+                </p>
+                <div class="mb-4">
+                    <h4 class="font-bold mb-2">📍 Lokasi:</h4>
+                    <p id="destinasiLokasi" class="text-gray-600">Jl. Raya Senggigi, Kecamatan Batu Layar, Kabupaten Lombok Barat, Nusa Tenggara Barat</p>
+                </div>
+                <button id="btnCuaca" class="btn btn-info mb-3">
+                    🌤️ Info Cuaca
+                </button>
+                <div id="infoCuaca" class="alert alert-info d-none" role="alert">
+                    <strong>Status Cuaca:</strong> <span id="statusCuaca"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Kalkulator Estimasi Biaya Perjalanan -->
+        <div class="card shadow-lg mb-5">
+            <div class="card-header bg-primary text-white">
+                <h3 class="card-title mb-0">💰 Kalkulator Estimasi Biaya Perjalanan</h3>
+            </div>
+            <div class="card-body">
+                <form id="kalkulatorForm">
+                    <div class="row mb-3">
+                        <div class="col-12 col-md-6 mb-3">
+                            <label for="jarak" class="form-label">Jarak Perjalanan (km):</label>
+                            <input type="number" class="form-control" id="jarak" placeholder="Masukkan jarak" min="0" step="0.1" required>
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                            <label for="transportasi" class="form-label">Jenis Transportasi:</label>
+                            <select class="form-select" id="transportasi" required>
+                                <option value="">Pilih transportasi</option>
+                                <option value="motor">Sepeda Motor (Rp 2.000/km)</option>
+                                <option value="mobil">Mobil Pribadi (Rp 5.000/km)</option>
+                                <option value="bus">Bus (Rp 3.000/km)</option>
+                                <option value="kereta">Kereta Api (Rp 4.000/km)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-success">Hitung Biaya</button>
+                    <button type="reset" class="btn btn-secondary">Reset</button>
+                </form>
+                <div id="hasilKalkulator" class="mt-4 p-3 bg-light rounded d-none">
+                    <h5 class="font-bold">Hasil Perhitungan:</h5>
+                    <p class="mb-1">Jarak: <span id="hasilJarak"></span> km</p>
+                    <p class="mb-1">Transportasi: <span id="hasilTransportasi"></span></p>
+                    <p class="mb-0"><strong>Total Biaya: Rp <span id="totalBiaya"></span></strong></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tombol kembali -->
+        <div class="text-center">
+            <a href="destinasi.html" class="btn btn-outline-primary">← Kembali ke Daftar Destinasi</a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer text-white py-8 mt-8">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <p>&copy; 2025 Wisata Daerahku. Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
+
